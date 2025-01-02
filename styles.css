@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.game-info {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.game-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+#guesses-left {
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.guesses-high {
+  color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.guesses-medium {
+  color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.guesses-low {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.game-input {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.history {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.guess-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+#game-over {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#game-over h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.difficulty-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.difficulty-btn {
+  padding: 0.5rem 1rem;
+  background-color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.difficulty-btn.active {
+  background-color: #28a745;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .difficulty-selector {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .difficulty-btn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .game-info {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .game-input {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  button#submit-guess {
+    width: 100%;
+  }
+
+  .guess-item {
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 380px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .game-info {
+    font-size: 0.85rem;
+  }
+}

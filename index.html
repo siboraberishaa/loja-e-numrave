@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja me numra</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loja me numra</h1>
+      <div class="difficulty-selector">
+        <button class="difficulty-btn" data-level="easy">
+          Leveli lehtë (4 shifra)
+        </button>
+        <button class="difficulty-btn" data-level="medium">
+          Leveli mesatar (6 shifra)
+        </button>
+        <button class="difficulty-btn" data-level="hard">
+          Leveli i vështirë (8 shifra)
+        </button>
+      </div>
+      <div class="game-info">
+        <p>
+          Gjej numrin <span id="digits-count">4</span>-shifror! Të kanë mbetur
+          edhe <span id="guesses-left">10</span> mundësi.
+        </p>
+        <p>Fiksuar = numri i saktë, pozita e saktë</p>
+        <p>Qëlluar = numri i saktë, pozita e gabuar</p>
+      </div>
+
+      <div class="game-input">
+        <input
+          type="number"
+          id="guess-input"
+          placeholder="Jep numrin"
+          min="1000"
+          max="9999"
+        />
+        <button id="submit-guess">Gjej numrin</button>
+      </div>
+
+      <div class="history" id="guess-history"></div>
+
+      <div id="game-over" class="hidden">
+        <h2 id="result-message"></h2>
+        <button id="play-again">Luaj sërish</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
