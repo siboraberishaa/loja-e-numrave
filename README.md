@@ -22,8 +22,8 @@ A fun and challenging number guessing game where players try to guess a secret n
 ![Winning Screen](screenshots/2.png)
 
 
-### Different Difficulty Levels
-![Difficulty Levels](screenshots/3.png)
+### Game Over
+![Game Over](screenshots/3.png)
 
 ## How to Play
 
