@@ -2,6 +2,10 @@
 
 A fun and challenging number guessing game where players try to guess a secret number using feedback in the form of fiksuar (correct digit in correct position) and qëlluar (correct digit in wrong position).
 
+# Preview
+![Preview](screenshots/preview.png)
+
+
 ## Game Features
 
 - Three difficulty levels:

@@ -1,0 +1,87 @@
+/* Tablet Responsive Design */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .game-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  .difficulty-container {
+    margin: 20px 0;
+  }
+
+  .difficulty-btn {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    margin: 0 10px;
+  }
+
+  #guess-input {
+    font-size: 1.3rem;
+    padding: 12px;
+    width: 200px;
+  }
+
+  #submit-guess {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+
+  .guess-item {
+    font-size: 1.1rem;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  #game-over {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+
+  #play-again {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+
+  .guesses-container {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
+  #guess-history {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+
+/* For larger tablets in landscape mode */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .game-container {
+    width: 80%;
+    max-width: 900px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  #guess-history {
+    max-height: 500px;
+  }
+}
+
+/* Ensure proper orientation on tablets */
+@media screen and (orientation: landscape) and (max-height: 768px) {
+  .game-container {
+    margin: 10px auto;
+  }
+
+  #guess-history {
+    max-height: 300px;
+  }
+} 
